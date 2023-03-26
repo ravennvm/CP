@@ -1,0 +1,21 @@
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="includes/templates/assets/js/jquery.appear.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="includes/templates/assets/js/bootstrap.min.js"></script>
+<script src="includes/templates/assets/js/select2.min.js"></script>
+<script type="text/javascript">
+    var base_url = 'index.php';
+    $('#submitBtn').click(function() {
+     $('#donation_type').text($('#donation_pack').val());
+     $('#acc_name').text($('#account_data').val());
+});
+
+$('#submit').click(function(){
+    alert('submitting');
+    $('#formfield').submit();
+});
+</script>
+<script src="includes/templates/assets/js/gamecp.js"></script>
+<script src="includes/templates/assets/js/upgrade_tool.js"></script>
+</html>

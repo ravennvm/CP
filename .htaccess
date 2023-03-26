@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}.php -f
+	RewriteRule ^(.+)$ /$1.php [L,QSA]
+    RewriteCond %{HTTPS} off
+    Options -Indexes
+</IfModule>
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE application/x-javascript text/css text/html text/xml
+</IfModule>
